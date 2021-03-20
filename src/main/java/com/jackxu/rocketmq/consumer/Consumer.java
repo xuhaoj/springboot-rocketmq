@@ -9,8 +9,8 @@ import org.apache.rocketmq.spring.core.RocketMQListener;
 /**
  * @author jackxu
  */
-@RocketMQMessageListener(topic = "jackxu-springboot-topic", consumerGroup = "springboot-consumer-group",
-        selectorExpression = "tagA", selectorType = SelectorType.TAG,
+@RocketMQMessageListener(topic = "springboot-topic", consumerGroup = "springboot-consumer-group",
+        selectorExpression = "tag1", selectorType = SelectorType.TAG,
         messageModel = MessageModel.CLUSTERING, consumeMode = ConsumeMode.CONCURRENTLY)
 public class Consumer implements RocketMQListener<String> {
 
